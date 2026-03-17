@@ -1,0 +1,33 @@
+#!/bin/bash
+# 资金管理系统项目结构
+
+fund-management-system/
+├── backend/                      # 后端Java项目
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/fund/
+│   │   │   │       ├── FundManagementApplication.java
+│   │   │   │       ├── entity/          # 实体类
+│   │   │   │       │   ├── Payment.java
+│   │   │   │       │   ├── Refund.java
+│   │   │   │       │   └── Invoice.java
+│   │   │   │       ├── repository/      # 数据访问层
+│   │   │   │       ├── service/         # 业务逻辑层
+│   │   │   │       └── controller/      # 控制器层
+│   │   │   └── resources/
+│   │   │       └── application.yml
+│   │   └── test/
+│   └── pom.xml
+├── frontend/                     # 前端React项目
+│   ├── src/
+│   │   ├── components/          # 组件
+│   │   │   ├── layout/         # 布局组件
+│   │   │   └── business/       # 业务组件
+│   │   ├── services/           # API调用
+│   │   ├── pages/              # 页面
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── public/
+└── README.md
