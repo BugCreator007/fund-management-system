@@ -6,19 +6,20 @@ spring:
     name: fund-management-backend
   
   datasource:
-    url: jdbc:h2:mem:funddb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:mysql://localhost:3306/funddb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: gulu
+    password: Gxl@987654321
   
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-  
+        dialect: org.hibernate.dialect.MySQLDialect
+
   h2:
     console:
       enabled: true
